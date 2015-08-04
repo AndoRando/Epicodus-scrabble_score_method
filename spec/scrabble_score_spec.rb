@@ -12,8 +12,13 @@ describe('String#scrabble_score') do
     expect("a".scrabble_score()).to(eq(1))
   end
 
-# TEST 2: Shows the combined scrabble score for a given word
-  it("Shows the combined scrabble score for a given word") do
+# TEST 2: Shows the combined scrabble score for a single-value
+  it("Shows the combined scrabble score for a given word with letters of the same value") do
     expect("last".scrabble_score()).to(eq(4))
+  end
+
+# TEST 3: Shows the combined scrabble score for a combined-value word
+  it("shows the combined scrabble score for a combined-value word") do
+    expect("bad".scrabble_score()).to(eq(6))
   end
 end
