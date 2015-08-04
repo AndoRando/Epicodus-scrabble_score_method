@@ -21,4 +21,9 @@ describe('String#scrabble_score') do
   it("shows the combined scrabble score for a combined-value word") do
     expect("bad".scrabble_score()).to(eq(6))
   end
+
+# TEST 4: Tolerates text insensitivity
+  it("Transforms all inputed characters into lowercase letters") do
+    expect("Bad".scrabble_score()).to(eq(6))
+  end
 end
